@@ -12,6 +12,7 @@ import XCTest
 class EasyMathTests: XCTestCase {
 
     let vc = MathVC()
+    let subtractionVC = SubtractionViewController()
     
     override func setUp() {
         super.setUp()
@@ -44,5 +45,9 @@ class EasyMathTests: XCTestCase {
     func testAdditionMathCheck() {
         XCTAssertEqual(vc.additionMathCheck(2, secondNumber: 3), 5, "2 + 3 = 5")
         XCTAssertNotEqual(vc.additionMathCheck(2, secondNumber: 10), 19, "2 + 10 does not equal 19")
+    }
+    
+    func testSubtractionMathCheck() {
+        XCTAssertEqual(subtractionVC.subtractionMathCheck(18, secondNumber: 10), 8, "18 - 10 = 8")
     }
 }

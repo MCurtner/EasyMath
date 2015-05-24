@@ -15,6 +15,9 @@
 		3478BEBE1B11BD4400AB2CDD /* MathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478BEBD1B11BD4400AB2CDD /* MathVC.swift */; };
 		3478BEBF1B11CC2100AB2CDD /* MathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478BEBD1B11BD4400AB2CDD /* MathVC.swift */; };
 		3478BEC11B11D54B00AB2CDD /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478BEC01B11D54B00AB2CDD /* MainPageViewController.swift */; };
+		3478BEC31B11D76800AB2CDD /* SetMaxNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478BEC21B11D76800AB2CDD /* SetMaxNumbersViewController.swift */; };
+		3478BEC51B11F5D700AB2CDD /* SubtractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478BEC41B11F5D700AB2CDD /* SubtractionViewController.swift */; };
+		3478BEC61B12141B00AB2CDD /* SubtractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478BEC41B11F5D700AB2CDD /* SubtractionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,8 @@
 		3478BEB31B11BCE800AB2CDD /* EasyMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyMathTests.swift; sourceTree = "<group>"; };
 		3478BEBD1B11BD4400AB2CDD /* MathVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathVC.swift; sourceTree = "<group>"; };
 		3478BEC01B11D54B00AB2CDD /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		3478BEC21B11D76800AB2CDD /* SetMaxNumbersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMaxNumbersViewController.swift; sourceTree = "<group>"; };
+		3478BEC41B11F5D700AB2CDD /* SubtractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtractionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +90,10 @@
 				3478BEA41B11BCE700AB2CDD /* Images.xcassets */,
 				3478BEA61B11BCE700AB2CDD /* LaunchScreen.xib */,
 				3478BE9B1B11BCE700AB2CDD /* Supporting Files */,
-				3478BEBD1B11BD4400AB2CDD /* MathVC.swift */,
 				3478BEC01B11D54B00AB2CDD /* MainPageViewController.swift */,
+				3478BEC21B11D76800AB2CDD /* SetMaxNumbersViewController.swift */,
+				3478BEBD1B11BD4400AB2CDD /* MathVC.swift */,
+				3478BEC41B11F5D700AB2CDD /* SubtractionViewController.swift */,
 			);
 			path = EasyMath;
 			sourceTree = "<group>";
@@ -219,6 +226,8 @@
 				3478BEBE1B11BD4400AB2CDD /* MathVC.swift in Sources */,
 				3478BEC11B11D54B00AB2CDD /* MainPageViewController.swift in Sources */,
 				3478BE9E1B11BCE700AB2CDD /* AppDelegate.swift in Sources */,
+				3478BEC51B11F5D700AB2CDD /* SubtractionViewController.swift in Sources */,
+				3478BEC31B11D76800AB2CDD /* SetMaxNumbersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3478BEBF1B11CC2100AB2CDD /* MathVC.swift in Sources */,
+				3478BEC61B12141B00AB2CDD /* SubtractionViewController.swift in Sources */,
 				3478BEB41B11BCE800AB2CDD /* EasyMathTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

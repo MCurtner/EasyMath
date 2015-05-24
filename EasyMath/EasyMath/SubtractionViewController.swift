@@ -1,5 +1,5 @@
 //
-//  MathVC.swift
+//  SubtractionViewController.swift
 //  EasyMath
 //
 //  Created by Matthew Curtner on 5/24/15.
@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-class MathVC: UIViewController {
-    
+class SubtractionViewController: UIViewController {
+
     @IBOutlet weak var firstNumberLabel: UILabel!
     @IBOutlet weak var secondNumberLabel: UILabel!
     @IBOutlet weak var answerField: UITextField!
@@ -20,13 +20,13 @@ class MathVC: UIViewController {
     var maxDigitRandomNumber: Int!
     var firstNumber: Int?
     var secondNumber: Int?
-    var additionMathValueCheck: Int?
-    var additionMathInput: Int?
+    var subtractionMathValueCheck: Int?
+    var subtractionMathInput: Int?
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         displayMathProblem()
     }
     
@@ -45,17 +45,29 @@ class MathVC: UIViewController {
         firstNumber = assignRandomNumber(UInt32(maxDigitRandomNumber))
         secondNumber = assignRandomNumber(UInt32(maxDigitRandomNumber))
         
+        //Check if firstNumber is greater than or equal to second number
+        if firstNumber >= secondNumber {
+            firstNumberLabel.text = convertNumberToString(firstNumber!)
+            secondNumberLabel.text = convertNumberToString(secondNumber!)
+        } else {
+            //If second number is smaller than the firstNumber,
+            //run the random number again.
+            firstNumber = assignRandomNumber(UInt32(maxDigitRandomNumber))
+            secondNumber = assignRandomNumber(UInt32(maxDigitRandomNumber))
+        }
+        
+
         firstNumberLabel.text = convertNumberToString(firstNumber!)
         secondNumberLabel.text = convertNumberToString(secondNumber!)
         
-        additionMathValueCheck! = additionMathCheck(firstNumber!, secondNumber: secondNumber!)
+        subtractionMathValueCheck! = subtractionMathCheck(firstNumber!, secondNumber: secondNumber!)
     }
     
     
     //Add the two numbers and return the answer
-    func additionMathCheck(firstNumber: Int, secondNumber: Int) -> Int {
-        additionMathValueCheck = firstNumber + secondNumber
-        return additionMathValueCheck!
+    func subtractionMathCheck(firstNumber: Int, secondNumber: Int) -> Int {
+        subtractionMathValueCheck = firstNumber - secondNumber
+        return subtractionMathValueCheck!
     }
     
     //Convert the number to String
@@ -64,7 +76,7 @@ class MathVC: UIViewController {
     }
     
     //Convert the string to Int value
-    func convertStringToInt(stringInput: String) -> Int {        
+    func convertStringToInt(stringInput: String) -> Int {
         return stringInput.toInt()!
     }
     
@@ -75,9 +87,9 @@ class MathVC: UIViewController {
             answerField.text = "0"
         }
         
-        additionMathInput = convertStringToInt(answerField.text)
+        subtractionMathInput = convertStringToInt(answerField.text)
         
-        if additionMathInput! == additionMathValueCheck {
+        if subtractionMathInput! == subtractionMathValueCheck {
             validationLabel.text = "Correct!"
             
             let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 2))
